@@ -1,6 +1,17 @@
 name: Build and Deploy
 on:
     push:
+        paths:
+            - '!README.md'
+        branches:
+            - develop
+    pull_request:
+        types: [opened, synchronize]
+        branches:
+            - develop
+    push:
+        paths:
+            - '!README.md'
         branches:
             - develop
     pull_request:
