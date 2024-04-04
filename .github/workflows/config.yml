@@ -1,12 +1,12 @@
-name: hello world
+name: Build and Deploy
 on:
     push:
         branches:
             - main
 
 jobs:
-    say-hello:
+    build:
         runs-on: self-hosted
         steps:
-            - name: Say Hello
-              run: echo "Hello world!"
+            - name: Checkout code
+              uses: actions/checkout@v4
