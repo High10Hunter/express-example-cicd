@@ -10,3 +10,6 @@ jobs:
         steps:
             - name: Say Hello
               run: echo "Hello world!"
+
+            - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+            - run: echo Hello $GITHUB_ENV
