@@ -3,15 +3,14 @@ on:
     push:
         paths:
             - '!README.md'
-        branches:
-            - develop
+        branches: [develop]
     pull_request:
         types: [opened, synchronize]
         paths:
             - '!README.md'
-        branches:
-            - develop
-    workflow_dispatch:
+        branches: [develop]
+    # manual deploy - Continuous Delivery
+    # workflow_dispatch:
 
 jobs:
     build:
