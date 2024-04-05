@@ -3,11 +3,13 @@ on:
     push:
         paths:
             - '!README.md'
+            - '**.js'
         branches: [develop]
     pull_request:
         types: [opened, synchronize]
         paths:
             - '!README.md'
+            - '**.js'
         branches: [develop]
     # manual deploy - Continuous Delivery
     # workflow_dispatch:
