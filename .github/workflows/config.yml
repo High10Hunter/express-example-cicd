@@ -1,15 +1,13 @@
 name: Build and Deploy
 on:
     push:
-        paths:
-            - '!README.md'
-            - '**.js'
+        paths-ignore:
+            - 'README.md'
         branches: [develop]
     pull_request:
         types: [opened, synchronize]
-        paths:
-            - '!README.md'
-            - '**.js'
+        paths-ignore:
+            - 'README.md'
         branches: [develop]
     # manual deploy - Continuous Delivery
     # workflow_dispatch:
